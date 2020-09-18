@@ -18,5 +18,6 @@
 ## Рабочий стек
 
 * REACT
-* styled-components
-* storybook
+* Styled-components
+* TypeScript
+* Storybook
