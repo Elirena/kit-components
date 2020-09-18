@@ -1,0 +1,35 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import * as stories from './Input.stories.tsx';
+import Input from '.';
+import { ThemeProvider } from 'styled-components';
+import { author24 } from '../../theme';
+
+<Meta title="COMPONENTS|Input" component={Input} />
+
+<ThemeProvider theme={author24}>
+    <Preview withSource="close" mdxSource={`
+        <Input label="Lorem Ipsum" />
+    `}>
+        <div style={{
+            display: 'grid',
+            placeItems: 'center',
+            height: '100px',
+            font: `${({ theme }) => theme.typography.content_16px.font}`,
+        }}>
+            <Input label="Lorem Ipsum" />
+            <Input label="Placeholder" />
+        </div>
+    </Preview>
+</ThemeProvider>
+
+# Props
+
+<Props of={Input} />
+
+<div style={{display: 'none'}}>
+
+<Story name="Input">
+    {stories.input()}
+</Story>
+
+</div>

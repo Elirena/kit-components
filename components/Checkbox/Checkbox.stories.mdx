@@ -1,0 +1,44 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import * as stories from './Checkbox.stories.tsx';
+import Checkbox from '.';
+import { ThemeProvider } from 'styled-components';
+import { author24 } from '../../theme';
+
+<Meta title="COMPONENTS|Checkbox" component={Checkbox} />
+
+<ThemeProvider theme={author24}>
+    <Preview withSource="close" mdxSource={`
+        <Checkbox
+            label="Hi!"
+            placement="right"
+            size="small"
+            type="light"
+        >
+        </Checkbox>
+    `}>
+        <div style={{
+            display: 'grid',
+            placeItems: 'center',
+            height: '100px',
+            font: `${({ theme }) => theme.typography.content_16px.font}`,
+        }}>
+            <Checkbox
+                disabled={false}
+                label='Checkbox'
+                value='value'
+            ></Checkbox>
+        </div>
+    </Preview>
+</ThemeProvider>
+
+# Props
+
+<Props of={Checkbox} />
+
+<div style={{display: 'none'}}>
+
+<Story name="Checkbox">
+    {stories.checkbox()}
+</Story>
+
+</div>

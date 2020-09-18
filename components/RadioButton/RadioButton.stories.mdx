@@ -1,0 +1,28 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import * as stories from './RadioButton.stories.tsx';
+import RadioButton from '../RadioButton';
+import { ThemeProvider } from 'styled-components';
+import { author24 } from '../../theme';
+
+<Meta title="COMPONENTS|RadioButton" component={RadioButton} />
+
+<ThemeProvider theme={author24}>
+    <Preview withSource="close" mdxSource={`
+        <RadioButton label="Default" />
+    `}>
+        <RadioButton label="Default">
+        </RadioButton>
+    </Preview>
+</ThemeProvider>
+
+# Props
+
+<Props of={RadioButton} />
+
+<div style={{display: 'none'}}>
+
+<Story name="RadioButton">
+    {stories.radioButton()}
+</Story>
+
+</div>
